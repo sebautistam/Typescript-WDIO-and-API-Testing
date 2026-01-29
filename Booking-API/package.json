@@ -1,0 +1,40 @@
+{
+  "name": "restful-booker-tests",
+  "type": "module",
+  "dependencies": {
+    "got": "^13.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/chai": "^5.2.3",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^25.1.0",
+    "chai": "^6.2.2",
+    "eslint": "^9.39.2",
+    "globals": "^17.1.0",
+    "joi": "^18.0.2",
+    "mocha": "^11.7.5",
+    "mocha-multi-reporters": "^1.5.1",
+    "mochawesome": "^7.1.4",
+    "prettier": "^3.8.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "test:spec": "mocha --reporter spec",
+    "test:html": "mocha",
+    "test-all": "npm run test:spec && npm run test:html && start .\\mochawesome-report\\mochawesome.html",
+    "test-ping": "mocha src/tests/ping.test.ts",
+    "test-booking": "mocha src/tests/full-booking.test.ts",
+    "test-search": "mocha src/tests/search.test.ts",
+    "test-negative": "mocha src/tests/negative-tests.test.ts",
+    "api-lint": "eslint .",
+    "api-format-check": "pretty-quick"
+  },
+  "version": "1.0.0",
+  "description": "Execute the complete test suite using `npm run test-all`",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

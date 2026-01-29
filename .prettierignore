@@ -1,0 +1,8 @@
+package.json
+package-lock.json
+eslint.config.mjs
+*.yml
+Booking-API/
+allure-report/
+allure-results/
+node-modules/

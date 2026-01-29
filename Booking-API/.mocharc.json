@@ -1,0 +1,13 @@
+{
+  "timeout": 15000,
+  "loader": "ts-node/esm",
+  "extension": ["ts"],
+  "spec": "src/tests/**/*.test.ts",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "reports",
+    "reportFilename": "api-test-report",
+    "html": true,
+    "json": false
+  }
+}
