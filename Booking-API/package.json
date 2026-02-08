@@ -24,7 +24,7 @@
     "test:spec": "mocha --reporter spec",
     "test:html": "mocha",
     "test-all": "npm run test:spec && npm run test:html && start .\\mochawesome-report\\mochawesome.html",
-    "test:ci:html": "mocha --reporter mochawesome --reporter-options reportDir=reports,reportFilename=api-test-report",
+    "test:ci:html": "mocha --reporter mochawesome --reporter-options reportDir=reports,reportFilename=api-test-report,inline=true",
     "test-ping": "mocha src/tests/ping.test.ts",
     "test-booking": "mocha src/tests/full-booking.test.ts",
     "test-search": "mocha src/tests/search.test.ts",
