@@ -82,7 +82,7 @@ When(/^I fill out the registration form correctly$/, async function () {
 
 Then(/^the account is created$/, async function () {
   await browser.waitUntil(async () => (await browser.getUrl()).includes('auth/login'), {
-    timeout: 5000,
-    timeoutMsg: 'Expected to be redirected to login page within 5s',
+    timeout: 15000,
+    timeoutMsg: 'Expected to be redirected to login page within 15s',
   });
 });

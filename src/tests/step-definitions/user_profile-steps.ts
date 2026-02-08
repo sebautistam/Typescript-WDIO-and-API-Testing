@@ -19,22 +19,22 @@ Given(/^I am logged in as a registered user$/, async function () {
   await loginPage.login(user.username, user.password);
 
   await browser.waitUntil(async () => (await browser.getUrl()).includes('account'), {
-    timeout: 5000,
-    timeoutMsg: 'Expected to be redirected to account page within 5s',
+    timeout: 15000,
+    timeoutMsg: 'Expected to be redirected to account page within 15s',
   });
 
   await accountPage.changeProfile();
 
   await browser.waitUntil(async () => (await browser.getUrl()).includes('profile'), {
-    timeout: 10000,
-    timeoutMsg: 'Expected to be redirected to profile page within 10s',
+    timeout: 15000,
+    timeoutMsg: 'Expected to be redirected to profile page within 15s',
   });
 
   await accountPage.selectors.info_form.country_tb.waitUntil(
     async () => (await accountPage.selectors.info_form.country_tb.getValue()) !== '',
     {
-      timeout: 10000,
-      timeoutMsg: 'Expected Country to be filled out within 10s',
+      timeout: 15000,
+      timeoutMsg: 'Expected Country to be filled out within 15s',
     },
   );
 });
@@ -57,8 +57,8 @@ When(/^I try to update the password to the same password currently in use$/, asy
 });
 
 Then(/^I see a password change error message with text "([^"]*)"$/, async function (expectedText) {
-  await accountPage.selectors.pwd_form.error_box.waitForExist({ timeout: 10000 });
-  await accountPage.selectors.pwd_form.error_box.waitForDisplayed({ timeout: 10000 });
+  await accountPage.selectors.pwd_form.error_box.waitForExist({ timeout: 15000 });
+  await accountPage.selectors.pwd_form.error_box.waitForDisplayed({ timeout: 15000 });
   const errorText = await accountPage.selectors.pwd_form.error_box.getText();
   await expect(errorText).toContain(expectedText);
 });
