@@ -30,7 +30,6 @@ describe('Full Booking Flow', function () {
         },
       });
 
-      // got returns body as string by default (without responseType: 'json')
       authBody = JSON.parse(authResponse.body) as { token?: string; reason?: string };
     });
 

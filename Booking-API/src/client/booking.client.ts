@@ -29,7 +29,6 @@ export default class BookingClient extends BaseClient {
     });
   }
 
-  // example: typing response body using the interface
   async createBookingTyped(bookingData: Booking): Promise<CreateBookingResponse> {
     const res = await got.post(`${this.baseUrl}${Endpoints.Booking}`, {
       json: bookingData,
