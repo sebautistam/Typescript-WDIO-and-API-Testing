@@ -1,5 +1,5 @@
 abstract class BasePage {
-  // each page must define its own path
+
   protected abstract path: string;
 
   async open(): Promise<void> {

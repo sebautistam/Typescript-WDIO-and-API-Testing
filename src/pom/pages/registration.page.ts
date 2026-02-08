@@ -34,7 +34,6 @@ class RegistrationPage extends BasePage {
     await this.selectors.form.city_tb.setValue(newUser.city);
     await this.selectors.form.state_tb.setValue(newUser.state);
 
-    // keeping your exact original approach
     await this.selectors.form.country_tb.selectByAttribute('value', newUser.country);
 
     await this.selectors.form.phone_tb.setValue(newUser.phone);
